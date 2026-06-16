@@ -1,0 +1,88 @@
+{
+	"info": {
+		"name": "Symfony Courses API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/courses",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8001",
+					"path": ["api", "courses"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Symfony веб-розробка\",\n    \"description\": \"Вивчення компонентів сучасного Symfony\",\n    \"duration\": 45\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/courses",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8001",
+					"path": ["api", "courses"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Course (PATCH)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Оновлений курс Symfony\",\n    \"duration\": 50\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/api/courses/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8001",
+					"path": ["api", "courses", "1"]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/api/courses/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8001",
+					"path": ["api", "courses", "1"]
+				}
+			},
+			"response": []
+		}
+	]
+}
